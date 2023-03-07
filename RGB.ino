@@ -24,7 +24,14 @@ void loop() {
   delay(1000);
   setColor(0, 0, 255); // Blue Color
   delay(1000);
+  setColor(255, 255, 0); // Yellow Color
+  delay(1000);
+  setColor(255, 0, 255); // Purple Color
+  delay(1000);
+  setColor(255, 255, 255); // White Color
+  delay(1000);
 }
+
 
 void setColor(int redValue, int greenValue, int blueValue) {
   analogWrite(redPin, redValue);
