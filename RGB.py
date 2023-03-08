@@ -8,31 +8,32 @@ import board
 from digitalio import DigitalInOut, Direction
 
 
-red_led = DigitalInOut(board.GP8)
-red_led.direction = Direction.OUTPUT
-green_led = DigitalInOut(board.GP10)
-green_led.direction = Direction.OUTPUT
-blue_led = DigitalInOut(board.GP12)
-blue_led.direction = Direction.OUTPUT
+RED_LED = DigitalInOut(board.GP8)
+GREEN_LED = DigitalInOut(board.GP10)
+BLUE_LED= DigitalInOut(board.GP12)
+
+RED_BLUE.direction = Direction.OUTPUT
+GREEN_LED.direction = Direction.OUTPUT
+BLUE_LED.direction = Direction.OUTPUT
 
 
-def setColor(redValue, greenValue, blueValue):
-    red_led.value = redValue
-    green_led.value = greenValue
-    blue_led.value = blueValue
+def set_color(red_value, green_value, blue_value):
+    RED_VALUE.value = red_value
+    GREEN_VALUE.value = green_value
+    BLUE_VALUE.value = blue_value
 
 while True:
     
-    setColor(True, False, False) # Red Color
+    set_color(True, False, False) # Red Color
     time.sleep(1)
-    setColor(False, True, False) # Green Color
+    set_color(False, True, False) # Green Color
     time.sleep(1)
-    setColor(False, False, True) # Blue Color
+    set_color(False, False, True) # Blue Color
     time.sleep(1)
-    setColor(True, True, False) # Yellow Color
+    set_color(True, True, False) # Yellow Color
     time.sleep(1)
-    setColor(True, False, True) # Purple Color
+    set_color(True, False, True) # Purple Color
     time.sleep(1)
-    setColor(True, True, True) # White Color
+    set_color(True, True, True) # White Color
     time.sleep(1)
    
